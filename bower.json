@@ -1,0 +1,20 @@
+{
+  "name": "angular2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/NiotoMOto/angular2Todo",
+  "authors": [
+    "NiotoMOto <antoine.guillemoto@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular2": "~1.4.6",
+    "material-design-lite": "~1.0.5"
+  }
+}

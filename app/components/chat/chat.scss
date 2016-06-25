@@ -1,0 +1,56 @@
+chat {
+  @extend .mdl-card;
+  @extend .mdl-shadow--2dp;
+  @extend .mdl-cell ;
+  @extend .mdl-cell--8-col;
+  .messages-container{
+    height: 65%;
+    overflow-y: scroll;
+  }
+
+  .message{
+    @extend .mdl-grid;
+    @extend .mdl-shadow--2dp;
+    background-color: white;
+    word-break: break-all;
+  }
+
+
+  .messages-container{
+    background-color: unquote("rgba(#{$palette-grey-200}, 1)");
+  }
+
+  .message-user{
+    text-align: center;
+  }
+
+  .message-date{
+      font-size: 10px;
+      color: green;
+  }
+
+  .circle {
+    @extend .mdl-shadow--2dp;
+    text-align: center;
+  	border-radius: 50%;
+  	width: 50px;
+  	height: 50px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .room-title{
+    padding: 12px;
+    font-size: 15px;
+    background-color: rgb(55, 71, 79);
+    color: white;
+  }
+
+  .text-field-container{
+    padding: 0;
+    .send-message{
+      width: 100%;
+    }
+  }
+}

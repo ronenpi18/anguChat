@@ -1,0 +1,13 @@
+html
+  body
+    div(*ng-for='#todo of todos')
+      input(type='checkbox', #chkbox='', [(checked)]='todo.completed')
+      | 	{{todo.text}}
+      a.glyphicon.glyphicon-remove((click)='removeTodo(todo)')
+    form.form-inline([ng-form-model]='myForm', (submit)='onSubmit()')
+      .form-group([class.has-error]='!newTodo.valid && newTodo.touched')
+        input.form-control([ng-form-control]="myForm.controls['newTodo']", placeholder='new todo')
+      button.btn.btn-primary(type='submit', [disabled]='!myForm.valid') Add Todo
+      button.btn.btn-warning(*ng-if='todos.length > 1', (click)='completeAll()') Complete All
+    .bg-warning(*ng-if='!myForm.valid && newTodo.touched') Form is invalid
+    .bg-warning(*ng-if='!newTodo.valid && newTodo.touched') newTodo is invalid

@@ -1,0 +1,17 @@
+html
+  body
+    .room-title
+      span Nom de la room un peu trop longue
+    .mdl-card--expand.messages-container
+      .mdl-grid(*ng-for='#message of messages')
+        .mdl-cell--2-col.message-user.mdl-cell--2-col-tablet.mdl-cell--1-col-phone
+          .circle
+        .mdl-cell--10-col.mdl-cell--6-col-tablet.mdl-cell--3-col-phone
+          .message
+            | {{message}}
+          span.message-date Amaury à 15h30
+    .mdl-card__actions.mdl-card--border.text-field-container
+      form([ng-form-model]='sendForm', (submit)='sendMessage()')
+        .mdl-textfield.mdl-js-textfield.send-message
+          textarea#text-message.mdl-textfield__input((keyup)='keyUpMessage($event)', rows='1', [ng-form-control]="sendForm.controls['message']")
+          label.mdl-textfield__label(for='sample1') Message
